@@ -3,10 +3,28 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0; 
 }
 
-/* MAIN ------------------------------------- */
+h1 { font-size: 1.5em; } 
+h2 { font-size: 1.3em; } 
+h3 { font-size: 1em; } 
+h4 { font-size: 1em; } 
+h5 { font-size: 1em; } 
+h6 { font-size: 1em; } 
+
+/* GENERAL ------------------------------------- */
 main { 
   margin: 1em; 
 }
+
+ul { 
+  margin:0em; 
+  padding-left: 1.5em; 
+} 
+
+li { 
+ list-style: circle; 
+}
+
+
 
 /* SECTION ------------------------------------------- */
 section { 
@@ -15,13 +33,22 @@ section {
 }
 
 section h2 { 
-  border-bottom: 1px dashed black; 
+  color: black; 
+  font-weight: 400; 
+  border-bottom: 1px dashed gray; 
 }
 
 section .fromto { 
+  float: right; 
+  font-weight: 400; 
   font-size: smaller; 
-  font-weight: lighter; 
+  font-style: oblique; 
 }
+
+section .fromto::after { 
+  clear: both; 
+}
+
 
 
 /* NAVIGATION ------------------------------------- */

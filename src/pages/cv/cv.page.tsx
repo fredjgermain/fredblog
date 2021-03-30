@@ -60,6 +60,7 @@ function ExperienceItem({item}:{item:IExperienceItem}) {
         return <li key={i}>{description}</li> 
       })} 
     </ul> 
+    <br/>
   </div> 
 } 
 
@@ -73,6 +74,7 @@ function QualificationItem({item}:{item:IQualificationItem}) {
         return <li key={i}><QualificationSubItem {...{subItem}} /></li> 
       })} 
     </ul> 
+    <br/>
   </div> 
 }
 
@@ -88,5 +90,6 @@ function EducationItem({item}:{item:IEducationItem}) {
     <h3><span>{title}</span> <FromTo {...{from,to}}/></h3> 
     <div>{institution}</div> 
     {note && <div>{note}</div>} 
+    <br/>
   </div> 
 } 
