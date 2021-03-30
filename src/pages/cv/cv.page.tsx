@@ -1,10 +1,11 @@
 import React from 'react'; 
-import {cvdata} from './cv.data'; 
+import {cvdata} from '../../data/cv.data'; 
+import {Section} from '../../components/section/section.component';
 
 export default function CvPage() { 
   const cvSections = [ 
     {sectionTitle: 'Publication', items:cvdata.publications, itemComponent:PublicationItem}, 
-    {sectionTitle: 'Projects', items:cvdata.projects, itemComponent:ProjectItem}, 
+    //{sectionTitle: 'Projects', items:cvdata.projects, itemComponent:ProjectItem}, 
     {sectionTitle: 'Professional experiences', items:cvdata.experiences, itemComponent:ExperienceItem}, 
     {sectionTitle: 'Qualifications', items:cvdata.qualifications, itemComponent:QualificationItem}, 
     {sectionTitle: 'Educations', items:cvdata.educations, itemComponent:EducationItem} 
@@ -21,23 +22,14 @@ export default function CvPage() {
 } 
 
 
-function Section({sectionTitle, items, ...props}:{sectionTitle:string, items:any[], itemComponent:any}) { 
-  return <div> 
-    <h2>{sectionTitle}</h2> 
-    {items.map( (item, i) => { 
-      return <props.itemComponent key={i} {...{item}} /> 
-    })} 
-  </div> 
-} 
-
 function FromTo({from, to}:{from:string|undefined, to:string|undefined}) { 
   if(from && to) 
-    return <span>{from} - {to}</span> 
+    return <span className={'fromto'}>{from} - {to}</span> 
   if(from && !to) 
-    return <span>{from}</span> 
+    return <span className={'fromto'}>{from}</span> 
   if(!from && to) 
-    return <span>{to}</span> 
-  return <span></span> 
+    return <span className={'fromto'}>{to}</span> 
+  return <span className={'fromto'}></span> 
 }
 
 

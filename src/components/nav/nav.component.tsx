@@ -1,7 +1,6 @@
 import { Link, withRouter } from 'react-router-dom'; 
 import { pagesLinks } from './pageslist.data'; 
 
-import '../../css/nav.css'; 
 
 interface INav { 
   history:any; 
@@ -10,14 +9,20 @@ interface INav {
   staticContext:any; 
 } 
 function Nav({history}:INav) { 
+  const pathName = history ? history['location'] ? history['location']['pathname']: '/': '/'; 
   return <nav> 
     <div> 
       {pagesLinks.map( pagelink => { 
-        return <span key={pagelink.label} >
+        const isCurrentPage = IsCurrentPage(pathName, pagelink.href); 
+        return <span key={pagelink.label} > 
           <Link to={pagelink.href}>{pagelink.label}</Link>
         </span> 
       })} 
     </div> 
   </nav> 
 } 
-export default withRouter(Nav);
+export default withRouter(Nav); 
+
+function IsCurrentPage(pathName:string, linkHref:string) { 
+  return (pathName === `/${linkHref}`); 
+} 

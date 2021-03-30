@@ -65,22 +65,23 @@ export const cvdata = {
     ]}, 
 
     {title:'Programming and markup languages, APIs, libraries', subItems:[ 
-      {title:'Typescript/Javascript', level:1}, 
-      {title:'React; React with typescript', level:1}, 
-      {title:'Mongoose/MongoDb', level:2}, 
-      {title:'C#', level:1}, 
-      {title:'Entity Framework', level:2}, 
+      {title:'Typescript/Javascript'}, 
+      {title:'React; React with typescript'}, 
+      {title:'Mongoose/MongoDb'}, 
+      {title:'C#'}, 
+      {title:'Entity Framework'}, 
       {title:'Markdown'}, 
       {title:'HTML5/Css'}, 
-      {title:'C and C++', level:2}, 
-      {title:'Java', level:2}, 
+      {title:'C and C++'}, 
+      {title:'Java'}, 
     ]}, 
 
     {title:'Software/IDE/Dev tools && methodologies', subItems:[ 
       {title:'VsCode'}, 
+      {title:'Clean coding'}, 
       {title:'Github'}, 
       {title:'Unity3d', level:'beginner'}, 
-      {title:'Unit testing'} 
+      {title:'Unit testing'}, 
     ]}, 
 
     {title:'Statistic & Research', subItems:[ 
@@ -100,7 +101,7 @@ export const cvdata = {
     {title:'Certificate, Computer science and software engineering', 
       from:'completed Fall 2018', 
       institution: 'UQAM (Université du Québec à Montréal)', 
-      note: "I was initially doing a B.A.Sc in CS and software engineering completed to 2/3, but I shorten it to a certificate."}, 
+      note: "I was initially going for a B.A.Sc in Computer sciences and software engineering, but I shorten it to a certificate."}, 
     {title:'M.Sc, Economics (Incomplete)', from:'Fall 2013', to:'Automn 2014', 
       institution:`ESG-UQAM (École des sciences de la gestion UQAM)`}, 
     {title:'B.Sc, Economics', from:'Fall 2010', to:'Summer 2013', 

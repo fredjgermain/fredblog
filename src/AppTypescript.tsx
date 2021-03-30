@@ -1,11 +1,10 @@
 import Nav from './components/nav/nav.component'; 
-import { Switch, Route, BrowserRouter } from 'react-router-dom'; 
-
+import { BrowserRouter } from 'react-router-dom'; 
 
 import './css/main.css'; 
 
-import {Switcher} from './components/nav/switcher.component';
-import {pagesLinks} from './components/nav/pageslist.data';
+import {Switcher} from './components/nav/switcher.component'; 
+import {pagesLinks} from './components/nav/pageslist.data'; 
 
 // Page 
 /*import HomePage from './pages/home/home.page'; 

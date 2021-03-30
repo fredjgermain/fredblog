@@ -1,0 +1,60 @@
+/* TYPO ------------------------------------- */
+h1, h2, h3, h4, h5, h6 { 
+  margin: 0; 
+}
+
+/* MAIN ------------------------------------- */
+main { 
+  margin: 1em; 
+}
+
+/* SECTION ------------------------------------------- */
+section { 
+  margin-top:1em; 
+  margin-bottom:1em; 
+}
+
+section h2 { 
+  border-bottom: 1px dashed black; 
+}
+
+section .fromto { 
+  font-size: smaller; 
+  font-weight: lighter; 
+}
+
+
+/* NAVIGATION ------------------------------------- */
+nav { 
+  /*background-color: gainsboro; */
+  padding: 1em; 
+  text-align: right; 
+  border-bottom: 1px solid black; 
+  margin: 1em; 
+} 
+
+nav span { 
+  margin-left:1em; 
+  text-shadow: 1em; 
+  font-weight: bolder; 
+} 
+
+nav a:hover { 
+  text-decoration: none; 
+} 
+
+/*nav a: { 
+  color: aqua; 
+}*/
+
+nav a { 
+  color: black; 
+  text-decoration: underline; 
+}
+
+
+/* FOOTER ------------------------------------- */
+footer { 
+  border-top: 1px solid black; 
+  margin: 1em; 
+}
