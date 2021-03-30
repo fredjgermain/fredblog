@@ -1,15 +1,14 @@
-import {cvdata} from '../../data/cv.data'; 
+import {projectsdata} from '../../data/projects.data'; 
 import {Section} from '../../components/section/section.component';
 
 export default function ProjectsPage() { 
   const projects:IProjectItem[] = []; 
-  const section = {sectionTitle: 'Projects', items:cvdata.projects, itemComponent:ProjectItem}; 
+  const section = {title: 'Web projects', items:projectsdata.web, component:ProjectItem}; 
   return <div> 
-    <h1>Projects page</h1> 
+    <h1>Projects</h1> 
     <Section {...section} /> 
   </div> 
 } 
-
 
 function ProjectItem({item}:{item:IProjectItem}) { 
   const {title, description, link} = item; 
@@ -17,5 +16,5 @@ function ProjectItem({item}:{item:IProjectItem}) {
     <h3>{title}</h3> 
     <div>{description}</div> 
     <a href={link.href}>{link.label}</a> 
-  </div>
-}
+  </div> 
+} 

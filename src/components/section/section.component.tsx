@@ -1,9 +1,9 @@
 
-export function Section({sectionTitle, items, ...props}:{sectionTitle:string, items:any[], itemComponent:any}) { 
-  return <section> 
-    <h2>{sectionTitle}</h2> 
+export function Section({title, items, ...props}:{title:string, items:any[], component:any}) { 
+  return <section id={title}> 
+    <h2>{title}</h2> 
     {items.map( (item, i) => { 
-      return <props.itemComponent key={i} {...{item}} /> 
+      return <props.component key={i} {...{item}} /> 
     })} 
-  </section>
+  </section> 
 } 

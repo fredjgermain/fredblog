@@ -9,7 +9,7 @@ import AboutPage from '../../pages/about/about.page';
 export const pagesLinks:IPageLink[] = [ 
   {href:'', label:'Home', component:HomePage}, 
   {href:'about', label:'About', component:AboutPage}, 
-  {href:'projects', label:'Projects page', component:ProjectsPage}, 
+  {href:'projects', label:'Projects', component:ProjectsPage}, 
   {href:'cv', label:'Curriculum Vitea', component:CvPage}, 
   {href:'contact', label:'Contact', component:ContactPage}, 
 ] 

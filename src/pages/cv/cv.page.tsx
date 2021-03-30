@@ -1,22 +1,24 @@
-import React from 'react'; 
 import {cvdata} from '../../data/cv.data'; 
-import {Section} from '../../components/section/section.component';
+import {Section} from '../../components/section/section.component'; 
 
 export default function CvPage() { 
   const cvSections = [ 
-    {sectionTitle: 'Publication', items:cvdata.publications, itemComponent:PublicationItem}, 
-    //{sectionTitle: 'Projects', items:cvdata.projects, itemComponent:ProjectItem}, 
-    {sectionTitle: 'Professional experiences', items:cvdata.experiences, itemComponent:ExperienceItem}, 
-    {sectionTitle: 'Qualifications', items:cvdata.qualifications, itemComponent:QualificationItem}, 
-    {sectionTitle: 'Educations', items:cvdata.educations, itemComponent:EducationItem} 
-  ]; 
+    {title: 'Publication', items:cvdata.publications, component:PublicationItem}, 
+    {title: 'Professional experiences', items:cvdata.experiences, component:ExperienceItem}, 
+    {title: 'Qualifications', items:cvdata.qualifications, component:QualificationItem}, 
+    {title: 'Educations', items:cvdata.educations, component:EducationItem} 
+  ];   
 
   return <div> 
     <h1>CV page</h1> 
+    {cvSections.map( section => { 
+      return <span><a href={`/cv#${section.title}`}>{section.title}</a><br/></span> 
+    })} 
+    
     <a href={''}>Printable version (french)</a> 
     <a href={''}>Printable version (english)</a> 
     {cvSections.map( section => { 
-      return <Section key={section.sectionTitle} {...section} /> 
+      return <Section key={section.title} {...section} /> 
     })} 
   </div> 
 } 

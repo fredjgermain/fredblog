@@ -3,17 +3,26 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0; 
 }
 
-h1 { font-size: 1.5em; } 
+h1 { 
+  font-size: 1.5em; 
+  color: rgb(0, 100, 0); 
+} 
 h2 { font-size: 1.3em; } 
-h3 { font-size: 1em; } 
+h3 { font-size: 1.1em; } 
 h4 { font-size: 1em; } 
 h5 { font-size: 1em; } 
 h6 { font-size: 1em; } 
 
+
+
 /* GENERAL ------------------------------------- */
+body { 
+  max-width: 40em; 
+} 
+
 main { 
   margin: 1em; 
-}
+} 
 
 ul { 
   margin:0em; 
@@ -22,25 +31,25 @@ ul {
 
 li { 
  list-style: circle; 
-}
+} 
 
 
 
 /* SECTION ------------------------------------------- */
 section { 
   margin-top:1em; 
-  margin-bottom:1em; 
+  margin-bottom:2em; 
 }
 
 section h2 { 
   color: black; 
   font-weight: 400; 
-  border-bottom: 1px dashed gray; 
+  border-bottom: 1px dashed black; 
 }
 
 section .fromto { 
   float: right; 
-  font-weight: 400; 
+  font-weight: lighter; 
   font-size: smaller; 
   font-style: oblique; 
 }
@@ -56,7 +65,7 @@ nav {
   /*background-color: gainsboro; */
   padding: 1em; 
   text-align: right; 
-  border-bottom: 1px solid black; 
+  border-bottom: 1px solid rgb(0, 100, 0); 
   margin: 1em; 
 } 
 
@@ -75,13 +84,14 @@ nav a:hover {
 }*/
 
 nav a { 
-  color: black; 
+  color: rgb(0, 100, 0); 
   text-decoration: underline; 
 }
 
 
+
 /* FOOTER ------------------------------------- */
 footer { 
-  border-top: 1px solid black; 
+  border-top: 1px solid rgb(0, 100, 0); 
   margin: 1em; 
 }
