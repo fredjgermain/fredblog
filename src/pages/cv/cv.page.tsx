@@ -1,26 +1,38 @@
 import {cvdata} from '../../data/cv.data'; 
 import {Section} from '../../components/section/section.component'; 
 
-export default function CvPage() { 
-  const cvSections = [ 
-    {title: 'Publication', items:cvdata.publications, component:PublicationItem}, 
-    {title: 'Professional experiences', items:cvdata.experiences, component:ExperienceItem}, 
-    {title: 'Qualifications', items:cvdata.qualifications, component:QualificationItem}, 
-    {title: 'Educations', items:cvdata.educations, component:EducationItem} 
-  ];   
+const cvSections = [ 
+  {title: '1. Publication', items:cvdata.publications, component:PublicationItem}, 
+  {title: '2. Professional experiences', items:cvdata.experiences, component:ExperienceItem}, 
+  {title: '3. Qualifications', items:cvdata.qualifications, component:QualificationItem}, 
+  {title: '4. Educations', items:cvdata.educations, component:EducationItem} 
+]; 
 
+export default function CvPage() { 
   return <div> 
     <h1>CV page</h1> 
-    {cvSections.map( section => { 
-      return <span><a href={`/cv#${section.title}`}>{section.title}</a><br/></span> 
-    })} 
-    
-    <a href={''}>Printable version (french)</a> 
-    <a href={''}>Printable version (english)</a> 
-    {cvSections.map( section => { 
-      return <Section key={section.title} {...section} /> 
+    <Printables/> 
+    <CvPageSubNav/> 
+    {cvSections.map( (section,i) => { 
+      return <Section key={section.title} {...{...section}} /> 
     })} 
   </div> 
+} 
+
+function Printables() {
+  return <div className={'printableCv'}> 
+    *<a href={''}>Printable version (french)</a><br/> 
+    *<a href={''}>Printable version (english)</a> 
+  </div> 
+}
+
+function CvPageSubNav() { 
+  return <ul className={'cvAnchors'}> 
+    {cvSections.map( (section, i) => { 
+      //const href = `${i+1}. ${section.title}`; 
+      return <li><a href={`/cv#${section.title}`}>{section.title}</a></li> 
+    })} 
+  </ul> 
 } 
 
 
@@ -32,25 +44,15 @@ function FromTo({from, to}:{from:string|undefined, to:string|undefined}) {
   if(!from && to) 
     return <span className={'fromto'}>{to}</span> 
   return <span className={'fromto'}></span> 
-}
-
+} 
 
 function PublicationItem({item}:{item:IPublicationItem}) {
-  const {title, reference, link} = item; 
+  const {title, reference, href} = item; 
   return <div> 
-    <h3><a href={link.href}>{title}</a></h3> 
+    <h3><a href={href} target="_blank">{title}</a></h3> 
     <div>{reference}</div> 
   </div> 
 } 
-
-function ProjectItem({item}:{item:IProjectItem}) { 
-  const {title, description, link} = item; 
-  return <div> 
-    <h3>{title}</h3> 
-    <div>{description}</div> 
-    <a href={link.href}>{link.label}</a> 
-  </div>
-}
 
 function ExperienceItem({item}:{item:IExperienceItem}) { 
   const {title, employer, descriptions, from, to} = item; 
@@ -62,10 +64,9 @@ function ExperienceItem({item}:{item:IExperienceItem}) {
         return <li key={i}>{description}</li> 
       })} 
     </ul> 
-    <br/>
+    <br/> 
   </div> 
 } 
-
 
 function QualificationItem({item}:{item:IQualificationItem}) { 
   const {title, subItems} = item; 

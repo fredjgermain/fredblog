@@ -10,12 +10,15 @@ interface INav {
 } 
 function Nav({history}:INav) { 
   const pathName = history ? history['location'] ? history['location']['pathname']: '/': '/'; 
+  const currentPageLink = GetCurrentPageLink(pathName); 
+
   return <nav> 
     <div> 
       {pagesLinks.map( pagelink => { 
-        const isCurrentPage = IsCurrentPage(pathName, pagelink.href); 
-        return <span key={pagelink.label} > 
-          <Link to={pagelink.href}>{pagelink.label}</Link>
+        const isCurrent = currentPageLink === pagelink; 
+        const className = isCurrent ? 'activeLink': 'normalLink'; 
+        return <span key={pagelink.label}> 
+          <Link className={className} to={pagelink.href}>{pagelink.label}</Link> 
         </span> 
       })} 
     </div> 
@@ -23,6 +26,7 @@ function Nav({history}:INav) {
 } 
 export default withRouter(Nav); 
 
-function IsCurrentPage(pathName:string, linkHref:string) { 
-  return (pathName === `/${linkHref}`); 
+
+function GetCurrentPageLink(pathName:string) { 
+  return pagesLinks.find( link => (pathName === `/${link.href}`)); 
 } 

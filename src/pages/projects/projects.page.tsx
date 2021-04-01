@@ -3,18 +3,25 @@ import {Section} from '../../components/section/section.component';
 
 export default function ProjectsPage() { 
   const projects:IProjectItem[] = []; 
-  const section = {title: 'Web projects', items:projectsdata.web, component:ProjectItem}; 
+  const sections = projectsdata.map( p => { 
+    return {...p, component:ProjectItem} 
+  }); 
   return <div> 
     <h1>Projects</h1> 
-    <Section {...section} /> 
+    {sections.map( section => { 
+      return <Section key={section.title} {...section} /> 
+    })} 
   </div> 
 } 
 
-function ProjectItem({item}:{item:IProjectItem}) { 
-  const {title, description, link} = item; 
+export function ProjectItem({item}:{item:IProjectItem}) { 
+  const {title, description, href, technical} = item; 
   return <div> 
-    <h3>{title}</h3> 
+    <h3><a href={href} target="_blank">{title}</a></h3> 
+    <div className={'technical'}> 
+      {technical.map( t => { return <span>[{t}]</span> })} 
+    </div> 
     <div>{description}</div> 
-    <a href={link.href}>{link.label}</a> 
+    <br/> 
   </div> 
 } 

@@ -2,24 +2,21 @@ interface IPageLink {
   href: string; 
   label: string; 
   component: any; 
-} 
-
-type ILink = { 
-  href: string; 
-  label: string; 
+  subNav?: any; 
 } 
 
 interface IProjectItem { 
   title: string; 
-  description: string; 
-  link: ILink; 
+  technical: string[]; 
+  description: any; 
+  href: string; 
 } 
 
 interface IPublicationItem { 
   title: string; 
   reference: string; 
   author: string; 
-  link: ILink; 
+  href: string; 
 } 
 
 interface IEducationItem { 

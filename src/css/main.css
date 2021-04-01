@@ -1,11 +1,20 @@
+/* 
+https://colorhunt.co/palette/273933 
+  lighbluegray: #bfcba8 
+  turqoisegray: #5b8a72 
+  bluegray:     #56776c 
+  darkbluegray: #464f41 
+*/
+
+
 /* TYPO ------------------------------------- */
-h1, h2, h3, h4, h5, h6 { 
+h1, h2, h3, h4, h5, h6, p { 
   margin: 0; 
 }
 
 h1 { 
   font-size: 1.5em; 
-  color: rgb(0, 100, 0); 
+  color: #56776c; 
 } 
 h2 { font-size: 1.3em; } 
 h3 { font-size: 1.1em; } 
@@ -13,11 +22,23 @@ h4 { font-size: 1em; }
 h5 { font-size: 1em; } 
 h6 { font-size: 1em; } 
 
+em { 
+  color: black; 
+  font-weight: bold; 
+}
+
+a { 
+  color: black; 
+  text-decoration: underline; 
+} 
+a:hover { text-decoration: none; } 
+
 
 
 /* GENERAL ------------------------------------- */
 body { 
   max-width: 40em; 
+  /*background-color: #bfcba8; */
 } 
 
 main { 
@@ -42,15 +63,15 @@ section {
 }
 
 section h2 { 
-  color: black; 
+  color: #464f41 ; 
   font-weight: 400; 
-  border-bottom: 1px dashed black; 
+  border-bottom: 1px dashed #464f41; 
 }
 
 section .fromto { 
   float: right; 
   font-weight: lighter; 
-  font-size: smaller; 
+  font-size: small; 
   font-style: oblique; 
 }
 
@@ -58,6 +79,33 @@ section .fromto::after {
   clear: both; 
 }
 
+.technical { 
+  font-size: small; 
+  font-weight: bold; 
+  color: gray; 
+  margin-left: 0.3em; 
+  padding-left: 0.2em; 
+  padding-right: 0.2em; 
+} 
+
+.technical span { 
+  border-radius: 4px; 
+  margin-left: 0.3em; 
+  padding-left: 0.2em; 
+  padding-right: 0.2em; 
+}
+
+
+/* CV PAGE ---------------------------------------- */
+.printableCv { 
+  font-size: smaller; 
+  /*text-align: right;*/
+}
+
+.cvAnchors li { 
+  font-size: smaller; 
+  list-style: none; 
+} 
 
 
 /* NAVIGATION ------------------------------------- */
@@ -65,7 +113,7 @@ nav {
   /*background-color: gainsboro; */
   padding: 1em; 
   text-align: right; 
-  border-bottom: 1px solid rgb(0, 100, 0); 
+  border-bottom: 1px solid #bfcba8; 
   margin: 1em; 
 } 
 
@@ -75,23 +123,12 @@ nav span {
   font-weight: bolder; 
 } 
 
-nav a:hover { 
-  text-decoration: none; 
-} 
-
-/*nav a: { 
-  color: aqua; 
-}*/
-
-nav a { 
-  color: rgb(0, 100, 0); 
-  text-decoration: underline; 
-}
 
 
 
 /* FOOTER ------------------------------------- */
 footer { 
-  border-top: 1px solid rgb(0, 100, 0); 
+  border-top: 1px solid #bfcba8; 
   margin: 1em; 
+  text-align: center; 
 }

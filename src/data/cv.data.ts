@@ -5,7 +5,8 @@ export const cvdata = {
     {title:"Personal use of the Internet and travel: Evidence from the Canadian General Social Survey\'s 2010 time use module", 
     reference:"Travel Behaviour and Society, Volume 14, January 2019, Pages 81-91", 
     author:"Ugo Lachapelle, Frédéric Jean-Germain (As co-author)", 
-    link:{label:'', href:''}} 
+    href:'https://www.sciencedirect.com/science/article/abs/pii/S2214367X18301303?via%3Dihub' 
+   } 
   ] as IPublicationItem[], 
 
   experiences: [ 

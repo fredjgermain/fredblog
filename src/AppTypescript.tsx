@@ -1,10 +1,13 @@
-import Nav from './components/nav/nav.component'; 
 import { BrowserRouter } from 'react-router-dom'; 
+import Nav from './components/nav/nav.component'; 
+import Footer from './components/footer/footer.component'; 
 
 import './css/main.css'; 
 
 import {Switcher} from './components/nav/switcher.component'; 
 import {pagesLinks} from './components/nav/pageslist.data'; 
+
+
 
 // Page 
 /*import HomePage from './pages/home/home.page'; 
@@ -21,7 +24,7 @@ export default function AppTypescript() {
     <main> 
       <Switcher pagesLinks={pagesLinks} /> 
     </main> 
-    <footer>Footer</footer> 
+    <Footer/>
     </BrowserRouter>
   </div> 
 } 
