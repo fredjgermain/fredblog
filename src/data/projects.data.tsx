@@ -1,8 +1,10 @@
 export const projectsdata = [
   // PROJECTS ----------------------------------------------------
+
+
   {title:'Web project', 
-    items: [ 
-      {title: "React-mongoose-demo app", 
+    items: [
+      /*{title: "React-mongoose-demo app", 
         technical: ['React', 'Typescript/Javascript', 'Mongoose/MongoDb', 'Heroku'], 
         description: <div>
           <p>This is a fullstack projects using <em>React</em>, <em>Mongoose/MongoDb</em> and <em>Expess</em>. Both front and back-ends are written in <em>Typescript</em>. The project is deployed on <em>Heroku</em>, and its database hosted on <em>MongoDb Atlas</em>.</p> 
@@ -12,7 +14,20 @@ export const projectsdata = [
             - and a <em>patient section</em> allowing a patient to complete questionnaires.</p> 
           </div>, 
         href:'https://react-mongoose-demo.herokuapp.com',} 
-    ] as IProjectItem[], 
+     */
+      {title: "Backend-Typegraphql-Typegoose", 
+        technical: ['Typescript', 'Apollo', 'Typegraphql', 'Typegoose', 'Heroku'], 
+        description: <div>
+          <p> This project is a demontration backend which including an apollo-server connecting to a mongodb database. It is written in typescript and uses Apollo, Typegraphql and Typegoose.</p> 
+
+          <p>The business model definitions combine both Typegraphql and Typegoose to avoid code redundancy, for ease of reading and modifications. They map graphql object, queries and mutations with mongodb documents. Business model can have One-To-One or One-To-Many relations, such that nested documents can be queried in graphql playground easily.</p> 
+
+          <p>Most resolvers are generics and 'factoried'; factoried resolvers can accomodate any/most business models without the need to 'hardcode' specific resolver for each model. These resolvers include CRUD like functionalities (create, read, update, delete, and validate).</p> 
+
+          <p>The data and business model in this demo are for demonstration purposes.</p> 
+        </div>
+      }
+    ] as IProjectItem[],
   }, 
 
   {title:'Misc', 
@@ -58,8 +73,6 @@ export const projectsdata = [
         href:'https://github.com/fredjgermain/Demo/tree/master/08-Laboratoire_Stata'},
     ] as IProjectItem[] 
   }, 
-
-  
 ] 
 
 export const feature = projectsdata[0].items[0] as IProjectItem; 
