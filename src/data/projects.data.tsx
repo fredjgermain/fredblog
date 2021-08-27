@@ -25,7 +25,9 @@ export const projectsdata = [
           <p>Most resolvers are generics and 'factoried'; factoried resolvers can accomodate any/most business models without the need to 'hardcode' specific resolver for each model. These resolvers include CRUD like functionalities (create, read, update, delete, and validate).</p> 
 
           <p>The data and business model in this demo are for demonstration purposes.</p> 
-        </div>
+          
+        </div>, 
+        href:'https://react-mongoose-demo.herokuapp.com'
       }
     ] as IProjectItem[],
   }, 
