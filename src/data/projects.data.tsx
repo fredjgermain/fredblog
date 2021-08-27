@@ -24,7 +24,12 @@ export const projectsdata = [
 
           <p>Most resolvers are generics and 'factoried'; factoried resolvers can accomodate any/most business models without the need to 'hardcode' specific resolver for each model. These resolvers include CRUD like functionalities (create, read, update, delete, and validate).</p> 
 
-          <p>The data and business model in this demo are for demonstration purposes.</p> 
+          <p>The data and business models in this demo are for demonstration purposes.</p> 
+
+          <p>A matching front-end will soon be available, but the API can be still be tested in a graphql playground at 
+          <a href={'https://www.graphqlbin.com/v2/new'}>graphqlbin</a> and copy paste <em>https://fjg-demo-typegql-typegoose.herokuapp.com/graphql</em> as the endpoint url. </p>
+
+          <p>Youy may also consult the code itself at <a href={'https://github.com/fredjgermain/gql_mongoose_tsc'}>on github.</a></p>
           
         </div>, 
         href:'https://react-mongoose-demo.herokuapp.com'
@@ -43,12 +48,12 @@ export const projectsdata = [
           </div>, 
           href:'https://github.com/fredjgermain/Demo/tree/master/01-FileSystemSimulation'}, 
 
-      {title: "CsharpXlClass", 
+      /*{title: "CsharpXlClass", 
         technical: ['C#'], 
         description: <div> 
           
         </div>, 
-        href:'https://github.com/fredjgermain/Demo/tree/master/03-CsharpXlClass'}, 
+        href:'https://github.com/fredjgermain/Demo/tree/master/03-CsharpXlClass'}, */
 
       {title: "Assembly Mine sweeper", 
         technical: ['pep8 (Assembly)'], 
