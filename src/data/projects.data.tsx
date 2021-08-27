@@ -29,7 +29,7 @@ export const projectsdata = [
           <p>A matching front-end will soon be available, but the API can be still be tested in a graphql playground at 
           <a href={'https://www.graphqlbin.com/v2/new'}>graphqlbin</a> and copy paste <em>https://fjg-demo-typegql-typegoose.herokuapp.com/graphql</em> as the endpoint url. </p>
 
-          <p>Youy may also consult the code itself at <a href={'https://github.com/fredjgermain/gql_mongoose_tsc'}>on github.</a></p>
+          <p>You may also consult the code itself <a href={'https://github.com/fredjgermain/gql_mongoose_tsc'}>on github.</a></p>
           
         </div>, 
         href:'https://react-mongoose-demo.herokuapp.com'
@@ -44,7 +44,7 @@ export const projectsdata = [
         description: <div> 
           <p>This project was a practical assignement in the context of the course <a href={'https://etudier.uqam.ca/cours?sigle=INF3172'}>INF3172 - Principes des systèmes d'exploitation</a> at UQAM University.</p> 
           
-          <p>The this project simulates a file systems which can create/delete/write/read simulated files and directories. On execution this program generate a series of <em>.txt</em> files which keeps track of information relative to the simulated files and directories as would a files system keeping track of real files and directories and their respective simulated memory space. Albeit this simulation is extremely simplied.</p> 
+          <p>The this project simulates a file systems which can create/delete/write/read simulated files and directories. On execution this program generate a series of <em>.txt</em> files which keeps track of information relative to the simulated files and directories as would a files system keeping track of real files and directories and their respective simulated memory space. Albeit this simulation is extremely simplied. The project's code is available <a href={'https://github.com/fredjgermain/Demo/tree/master/05-Assembly_MineSweeper'}>on github.</a></p> 
           </div>, 
           href:'https://github.com/fredjgermain/Demo/tree/master/01-FileSystemSimulation'}, 
 
