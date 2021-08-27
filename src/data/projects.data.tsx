@@ -26,8 +26,7 @@ export const projectsdata = [
 
           <p>The data and business models in this demo are for demonstration purposes.</p> 
 
-          <p>A matching front-end will soon be available, but the API can be still be tested in a graphql playground at 
-          <a href={'https://www.graphqlbin.com/v2/new'}>graphqlbin</a> and copy paste <em>https://fjg-demo-typegql-typegoose.herokuapp.com/graphql</em> as the endpoint url. </p>
+          <p>A matching front-end will soon be available. Meanwhile the API can be still be tested in a graphql playground at <a href={'https://www.graphqlbin.com/v2/new'}>graphqlbin</a> and copy paste <em>https://fjg-demo-typegql-typegoose.herokuapp.com/graphql</em> as the endpoint url. </p>
 
           <p>You may also consult the code itself <a href={'https://github.com/fredjgermain/gql_mongoose_tsc'}>on github.</a></p>
           
